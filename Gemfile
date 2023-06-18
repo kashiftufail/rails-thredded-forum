@@ -77,4 +77,5 @@ end
 gem "devise", "~> 4.9"
 gem "simple_form", "~> 5.2"
 gem "thredded", "~> 1.1"
-gem "gemoji", "~> 4.1"
+
+gem "twemoji", "~> 3.1"

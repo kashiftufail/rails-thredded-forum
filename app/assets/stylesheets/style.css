@@ -1,0 +1,7 @@
+img.emoji{
+  width: 0.1em !important;
+  height: 0.1em !important;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.35em;
+  -webkit-user-drag: none;
+} 
