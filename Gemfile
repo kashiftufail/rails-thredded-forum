@@ -79,3 +79,5 @@ gem "simple_form", "~> 5.2"
 gem "thredded", "~> 1.1"
 
 gem "twemoji", "~> 3.1"
+
+gem "faker", "~> 3.2"
