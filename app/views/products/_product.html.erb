@@ -1,32 +1,7 @@
-<div id="<%= dom_id product %>">
-  <p>
-    <strong>Title:</strong>
-    <%= product.title %>
-  </p>
-
-  <p>
-    <strong>Isbn:</strong>
-    <%= product.isbn %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= product.body %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
-
-  <p>
-    <strong>Status:</strong>
-    <%= product.status %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= product.user_id %>
-  </p>
-
-</div>
+<tr>
+  <th scope="row"><%=product.id%></th>
+  <td><%=product.title%></td>
+  <td><%=product.price%></td>
+  <td><%=product.status%></td>
+  <td><%=product.user_id%></td>
+</tr>

@@ -81,3 +81,7 @@ gem "thredded", "~> 1.1"
 gem "twemoji", "~> 3.1"
 
 gem "faker", "~> 3.2"
+
+gem "ransack", "~> 4.0"
+
+gem "will_paginate", "~> 4.0"
