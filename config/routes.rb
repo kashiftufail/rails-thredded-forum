@@ -12,5 +12,5 @@ Rails.application.routes.draw do
 
   get "users/:id", to: "profiles#show"
   # Defines the root path route ("/")
-  # root "/forum"
+  root "products#index"
 end
