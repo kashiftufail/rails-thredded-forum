@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_17_071500) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_104752) do
+  
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -21,6 +23,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_17_071500) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.string "isbn"
+    t.text "body"
+    t.decimal "price", precision: 7, scale: 2
+    t.boolean "status"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "thredded_categories", force: :cascade do |t|
@@ -268,6 +282,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_17_071500) do
     t.index ["username"], name: "username_nocase", unique: true
   end
 
+  add_foreign_key "products", "users"
   add_foreign_key "thredded_messageboard_users", "thredded_messageboards", on_delete: :cascade
   add_foreign_key "thredded_messageboard_users", "thredded_user_details", on_delete: :cascade
   add_foreign_key "thredded_user_post_notifications", "thredded_posts", column: "post_id", on_delete: :cascade
