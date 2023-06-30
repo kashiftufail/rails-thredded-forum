@@ -9,6 +9,12 @@
 <%= search_form_for @q do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title_cont, class: 'form-control' %>
+  <%= f.label :items_name_start %>
+  <%= f.search_field :items_name_start, class: 'form-control' %>
+  <%= f.label :user_id_eq %>
+  <%= f.search_field :user_id_eq, class: 'form-control' %>
+
+
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 
