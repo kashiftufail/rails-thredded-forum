@@ -10,8 +10,8 @@ gem "rails", "~> 7.0.5"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
+# gem "sqlite3", "~> 1.4"
+gem 'pg'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -85,3 +85,5 @@ gem "faker", "~> 3.2"
 gem "ransack", "~> 4.0"
 
 gem "will_paginate", "~> 4.0"
+
+gem "dotenv-rails", "~> 2.8"
