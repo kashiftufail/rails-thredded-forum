@@ -17,9 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= ENV.fetch("DATABASE_HOST") %>
-  username: <%= ENV.fetch("DATABASE_USERNAME") %>
-  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  host: <%= ENV.fetch("POSTGRES_HOST") %>
+  username: <%= ENV.fetch("POSTGRES_USER") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -27,7 +27,7 @@ default: &default
 
 development:
   <<: *default
-  database: forum-docker-dev
+  database: <%= ENV['POSTGRES_DB'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

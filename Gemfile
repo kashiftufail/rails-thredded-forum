@@ -87,3 +87,4 @@ gem "ransack", "~> 4.0"
 gem "will_paginate", "~> 4.0"
 
 gem "dotenv-rails", "~> 2.8"
+gem 'pry-rails', group: :development
